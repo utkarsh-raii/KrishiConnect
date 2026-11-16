@@ -1,0 +1,70 @@
+# ==========================================
+# KrishiConnect Root .gitignore
+# ==========================================
+
+# Dependencies
+node_modules/
+frontend/node_modules/
+legacy/**/node_modules/
+/.pnp
+.pnp.js
+
+# Build Outputs & Artifacts
+target/
+backend/target/
+dist/
+frontend/dist/
+build/
+out/
+coverage/
+*.dumpstream
+*.jar
+*.war
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+*.env
+backend/.env
+frontend/.env
+legacy/**/.env
+
+# Logs
+*.log
+logs/
+backend/logs/
+legacy/**/logs/
+
+# IDE & Editor Files
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Uploads and Temporary Directories
+uploads/
+backend/uploads/
+legacy/**/uploads/
+test-uploads/
+scratch/
+tmp/
+temp/
+
+# Old MERN project
+legacy/
