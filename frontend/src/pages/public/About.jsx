@@ -2,15 +2,17 @@ import { Link } from 'react-router-dom';
 import { HiOutlineHeart, HiOutlineGlobe, HiOutlineLightBulb, HiOutlineChartBar } from 'react-icons/hi';
 
 const TEAM = [
-  { name: 'Utkarsh Rai',   role: 'CEO & Co-Founder',     emoji: '👨‍💼', desc: 'Former IIT graduate with 10 years in AgriTech.' },
-  { name: 'Harsh Sharma',    role: 'CTO',                  emoji: '👩‍💻', desc: 'Ex-Google engineer, ML & platform architecture.' },
-  { name: 'Ayush Pathak',   role: 'Head of Partnerships', emoji: '🤝', desc: 'Built relationships with 5000+ farmers across India.' },
-  { name: 'Sangam Yadav & Gulab Baghel',    role: 'Product Designer & Developer',     emoji: '🎨', desc: 'Award-winning UX designer focused on rural tech.' },
+  {
+    name: 'Utkarsh Rai',
+    role: 'Project Developer',
+    emoji: '💻',
+    desc: 'Designed and developed Krishi Connect as an individual Java Full Stack project.'
+  },
 ];
 
 const VALUES = [
   { icon: HiOutlineHeart,   title: 'Farmer First',   desc: 'Every feature is built with farmers in mind. Their success is our mission.' },
-  { icon: HiOutlineGlobe,   title: 'Pan-India Reach', desc: 'Serving 18 states across India with local language support.' },
+  { icon: HiOutlineGlobe, title: 'Pan-India Vision', desc: 'Designed with the vision of supporting farmers across India through local language support.' },
   { icon: HiOutlineLightBulb,title: 'Innovation',    desc: 'Leveraging technology to solve age-old agricultural challenges.' },
   { icon: HiOutlineChartBar, title: 'Transparency',  desc: 'No hidden fees. Direct connections. Fair prices for everyone.' },
 ];
@@ -94,7 +96,7 @@ export default function About() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="section-title">Meet the Team</h2>
+            <h2 className="section-title">Project Developer</h2>
             <p className="section-subtitle">Passionate individuals building the future of Indian agriculture.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

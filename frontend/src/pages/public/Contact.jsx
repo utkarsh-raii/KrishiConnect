@@ -41,7 +41,7 @@ export default function Contact() {
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-forest-600 font-semibold text-sm tracking-widest uppercase mb-2">Contact Us</p>
           <h1 className="font-display text-4xl font-bold text-gray-900 mb-4">Get in Touch</h1>
-          <p className="text-gray-500 text-lg">Have questions? Our team is here to help. Reach out and we'll respond within 24 hours.</p>
+          <p className="text-gray-500 text-lg">Have questions? Get in touch with us for information about the Krishi Connect project.</p>
         </div>
       </section>
 
@@ -140,7 +140,7 @@ export default function Contact() {
             {[
               ['Is the platform free to use?', 'Registration is free for all users. We charge a small commission only on completed transactions.'],
               ['How are payments processed?', 'Payments are handled securely. Buyers upload receipts and funds are released after confirmation.'],
-              ['In which states are you available?', 'We operate in 18 states across India including MP, Gujarat, Maharashtra, Punjab, UP, and more.'],
+              ['In which states are you available?', 'Krishi Connect is designed to support farmers across India.'],
               ['Can I use the platform in Hindi?', 'Yes! The platform supports Hindi, Marathi, Gujarati, and English.'],
             ].map(([q, a], i) => (
               <details key={i} className="card cursor-pointer group">

@@ -54,7 +54,7 @@ export default function Footer() {
                 <GiWheat className="text-white text-xl" />
               </div>
               <div>
-                <p className="font-display font-bold text-lg leading-none">Farmer Harvest</p>
+                <p className="font-display font-bold text-lg leading-none">Krishi</p>
                 <p className="text-forest-400 text-xs tracking-widest uppercase">Connect</p>
               </div>
             </div>
