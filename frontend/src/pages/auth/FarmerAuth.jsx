@@ -94,7 +94,7 @@ export default function FarmerAuth() {
             <div className="w-9 h-9 bg-white/20 rounded-xl flex items-center justify-center">
               <GiWheat className="text-white text-xl" />
             </div>
-            <span className="font-display font-bold text-xl">Farmer Harvest Connect</span>
+            <span className="font-display font-bold text-xl">Krishi Connect </span>
           </div>
           <h2 className="font-display text-4xl font-bold mb-4 leading-tight">
             Your digital farming partner

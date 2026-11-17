@@ -31,7 +31,7 @@ export default function Footer() {
             Ready to transform your harvest?
           </h3>
           <p className="text-forest-300 mb-6 font-body">
-            Join thousands of farmers, buyers and service providers already using Harvest Connect.
+            Join thousands of farmers, buyers and service providers already using Krishi Connect.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/auth/farmer"   className="bg-forest-500 hover:bg-forest-400 text-white font-semibold px-8 py-3 rounded-xl transition-colors">
@@ -90,7 +90,7 @@ export default function Footer() {
 
         <div className="border-t border-forest-800 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-forest-400 text-sm">
-            © {new Date().getFullYear()} Farmer Harvest Connect. All rights reserved.
+            © {new Date().getFullYear()} Krishi Connect. All rights reserved.
           </p>
           
         </div>

@@ -27,7 +27,7 @@ export default function About() {
             <span className="text-gradient block">Agricultural Supply Chain</span>
           </h1>
           <p className="text-gray-500 text-lg leading-relaxed max-w-2xl mx-auto">
-            Founded in 2026, Farmer Harvest Connect was born from a simple observation: Indian farmers were losing 30-40% of their income to middlemen. We built the platform to change that.
+            Founded in 2026, Krishi Connect was born from a simple observation: Indian farmers were losing 30-40% of their income to middlemen. We built the platform to change that.
           </p>
         </div>
       </section>

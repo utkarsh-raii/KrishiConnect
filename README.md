@@ -65,7 +65,7 @@ KrishiConnect/
 - **Node.js 18+** & **npm**
 - **MySQL 8.0+**
 
-For complete step-by-step IDE instructions, see [docs/SETUP_GUIDE.md](file:///c:/Users/utkar/OneDrive/Desktop/KrishiConnect/docs/SETUP_GUIDE.md).
+[docs/SETUP_GUIDE.md](docs/SETUP_GUIDE.md)(file:///c:/Users/utkar/OneDrive/Desktop/KrishiConnect/docs/SETUP_GUIDE.md).
 
 ---
 
@@ -144,8 +144,8 @@ Result: **BUILD SUCCESS** (✓ 1078 modules transformed).
 ---
 
 ## 📚 Documentation Links
-- [Setup & Run Guide](file:///c:/Users/utkar/OneDrive/Desktop/KrishiConnect/docs/SETUP_GUIDE.md)
-- [API Documentation](file:///c:/Users/utkar/OneDrive/Desktop/KrishiConnect/docs/API_DOCUMENTATION.md)
-- [Database Design](file:///c:/Users/utkar/OneDrive/Desktop/KrishiConnect/docs/DATABASE_DESIGN.md)
-- [Feature Inventory](file:///c:/Users/utkar/OneDrive/Desktop/KrishiConnect/docs/FEATURE_INVENTORY.md)
-- [Phase 1 Progress Report](file:///c:/Users/utkar/OneDrive/Desktop/KrishiConnect/PROGRESS.md)
+- [Setup & Run Guide](docs/SETUP_GUIDE.md)
+- [API Documentation](docs/API_DOCUMENTATION.md)
+- [Database Design](docs/DATABASE_DESIGN.md)
+- [Feature Inventory](docs/FEATURE_INVENTORY.md)
+- [Phase 1 Progress Report](PROGRESS.md)

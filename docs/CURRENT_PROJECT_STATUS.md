@@ -16,7 +16,7 @@ The KrishiConnect application migration from MERN (MongoDB, Express, React, Node
 - **Real-Time Communication**: Spring STOMP over SockJS (`/ws`, `/topic/messages/{userId}`)
 - **Payment Processing**: Razorpay order initiation & HMAC-SHA256 signature verification
 
-### Frontend (`farmer-harvest-connect-frontend`)
+### Frontend (`frontend`)
 - **Framework**: React 18, Vite 5, Tailwind CSS
 - **Routing**: React Router DOM 6 with role-based dashboard layouts
 - **API Client**: Centralized Axios client (`src/api/axios.js`) with request interceptor for JWT bearer tokens and response interceptor for 401 handling
@@ -46,13 +46,13 @@ The KrishiConnect application migration from MERN (MongoDB, Express, React, Node
 
 ### Backend
 ```bash
-cd krishiconnect-backend
+cd backend
 mvn spring-boot:run
 ```
 
 ### Frontend
 ```bash
-cd farmer-harvest-connect-frontend
+cd frontend
 npm run dev
 ```
 Runs on `http://localhost:5173` talking to Spring Boot on `http://localhost:5001`.

@@ -54,7 +54,7 @@ export default function Navbar() {
           </div>
           <div className="leading-tight">
             <span className="font-display font-bold text-gray-900 text-lg block leading-none">
-              Harvest
+              Krishi
             </span>
             <span className="text-forest-600 text-xs font-semibold tracking-widest uppercase">
               Connect

@@ -217,7 +217,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-earth-600 font-semibold text-sm tracking-widest uppercase mb-2">Simple Process</p>
-            <h2 className="section-title">How Harvest Connect Works</h2>
+            <h2 className="section-title">Krishi Connect Works</h2>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">

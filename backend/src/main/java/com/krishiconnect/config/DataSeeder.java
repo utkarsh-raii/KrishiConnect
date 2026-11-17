@@ -65,7 +65,7 @@ public class DataSeeder implements CommandLineRunner {
         if (userRepository.countByRole("admin") == 0) {
             createUserIfMissing("FHC Admin", configuredAdminEmail != null ? configuredAdminEmail : "admin@fhc.com",
                     "Admin@1234", "9000000001", "admin",
-                    "New Delhi, India", "Farmer Harvest Connect HQ", null, null,
+                    "New Delhi, India", "Krishi Connect HQ", null, null,
                     "Platform Administrator for KrishiConnect agricultural marketplace.");
         }
 

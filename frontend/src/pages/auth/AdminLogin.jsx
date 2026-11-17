@@ -57,7 +57,7 @@ export default function AdminLogin() {
             <HiOutlineShieldCheck className="text-white text-3xl" />
           </div>
           <h1 className="font-display text-2xl font-bold text-white">Admin Portal</h1>
-          <p className="text-gray-400 text-sm mt-1">Farmer Harvest Connect Administration</p>
+          <p className="text-gray-400 text-sm mt-1">Krishi Connect Administration</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
