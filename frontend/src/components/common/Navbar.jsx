@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { HiOutlineMenuAlt3, HiX, HiChevronDown } from 'react-icons/hi';
 import { GiWheat } from 'react-icons/gi';
+import { MdTranslate } from 'react-icons/md';
 import { useAuth } from '../../context/AuthContext';
 import toast from 'react-hot-toast';
 
@@ -17,10 +18,22 @@ const LOGIN_OPTIONS = [
   { label: '🛒 Buyer',           to: '/auth/buyer' },
   { label: '🔐 Admin',           to: '/auth/admin' },
 ];
-
+const LANGUAGES = [
+  { label: 'English', value: 'en' },
+  { label: 'Bengali', value: 'bn' },
+  { label: 'Gujarati', value: 'gu' },
+  { label: 'Hindi', value: 'hi' },
+  { label: 'Kannada', value: 'kn' },
+  { label: 'Malayalam', value: 'ml' },
+  { label: 'Marathi', value: 'mr' },
+  { label: 'Punjabi', value: 'pa' },
+  { label: 'Tamil', value: 'ta' },
+  { label: 'Telugu', value: 'te' },
+];
 export default function Navbar() {
   const [scrolled,      setScrolled]      = useState(false);
   const [menuOpen,      setMenuOpen]      = useState(false);
+  const [translateOpen, setTranslateOpen] = useState(false);
   const [dropdownOpen,  setDropdownOpen]  = useState(false);
   const { user, isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
@@ -30,6 +43,53 @@ export default function Navbar() {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+  /* GOOGLE TRANSLATE */
+  useEffect(() => {
+    window.googleTranslateElementInit = () => {
+      if (window.google?.translate) {
+        new window.google.translate.TranslateElement(
+            {
+              pageLanguage: 'en',
+              includedLanguages: 'en,hi,mr,ta,te,bn,gu,pa,kn,ml',
+              layout:
+              window.google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+            },
+            'google_translate_navbar'
+        );
+      }
+    };
+
+    const existingScript = document.querySelector(
+        'script[src*="translate.google.com"]'
+    );
+
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.src =
+          'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+      script.async = true;
+      document.body.appendChild(script);
+    } else if (window.google?.translate) {
+      window.googleTranslateElementInit();
+    }
+  }, []);
+
+  const handleLanguageChange = (language) => {
+    const translateSelect = document.querySelector('.goog-te-combo');
+
+    if (!translateSelect) {
+      toast.error('Google Translate is still loading. Please try again.');
+      return;
+    }
+
+    translateSelect.value = language;
+
+    translateSelect.dispatchEvent(
+        new Event('change', { bubbles: true })
+    );
+
+    setTranslateOpen(false);
+  };
 
   const handleLogout = () => {
     logout();
@@ -128,6 +188,36 @@ export default function Navbar() {
             </>
           )}
         </div>
+        {/* Translate Button */}
+        <div className="relative">
+          <button
+              type="button"
+              onClick={() => setTranslateOpen(prev => !prev)}
+              className="p-2 rounded-lg text-gray-600 hover:bg-gray-100"
+              aria-label="Translate page"
+          >
+            <MdTranslate size={22} />
+          </button>
+
+          {translateOpen && (
+              <div className="absolute right-0 top-full mt-2 w-52 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50">
+                <p className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase">
+                  Select Language
+                </p>
+
+                {LANGUAGES.map(language => (
+                    <button
+                        key={language.value}
+                        type="button"
+                        onClick={() => handleLanguageChange(language.value)}
+                        className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-forest-50 hover:text-forest-700"
+                    >
+                      {language.label}
+                    </button>
+                ))}
+              </div>
+          )}
+        </div>
 
         {/* Mobile hamburger */}
         <button
@@ -137,6 +227,11 @@ export default function Navbar() {
           {menuOpen ? <HiX size={22} /> : <HiOutlineMenuAlt3 size={22} />}
         </button>
       </nav>
+      <div
+          id="google_translate_navbar"
+          className="fixed -left-[9999px] top-0"
+          aria-hidden="true"
+      ></div>
 
       {/* Mobile Menu */}
       {menuOpen && (
